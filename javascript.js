@@ -12,7 +12,7 @@ btnBuscar.addEventListener("click", function() {
         return;
     }
 
-    divResultado.innerHTML = "<p>Buscando...</p>";
+    divResultado.innerHTML = "<p style='text-align: center;'>Buscando...</p>";
 
     let url = `https://www.omdbapi.com/?t=${encodeURIComponent(nombrePelicula)}&apikey=${apiKey}`;
 
@@ -27,12 +27,16 @@ btnBuscar.addEventListener("click", function() {
             if (datos.Response === "False") {
                 divResultado.innerHTML = "<p class='error'>Pelicula no encontrada.</p>";
             } else {
+                let posterImg = datos.Poster;
+
                 divResultado.innerHTML = `
-                    <div class="tarjeta-pelicula">
-                        <img src="${datos.Poster}" alt="Poster de la pelicula">
-                        <h3>${datos.Title}</h3>
-                        <p><strong>Ano:</strong> ${datos.Year}</p>
-                        <p><strong>Sinopsis:</strong> ${datos.Plot}</p>
+                    <div class="tarjeta-pelicula" style="max-width: 400px; margin: 0 auto;">
+                        <div>
+                            <img src="${posterImg}" alt="Poster de ${datos.Title}">
+                            <h3>${datos.Title}</h3>
+                            <p><strong>Ano:</strong> ${datos.Year}</p>
+                            <p><strong>Sinopsis:</strong> ${datos.Plot}</p>
+                        </div>
                     </div>
                 `;
             }

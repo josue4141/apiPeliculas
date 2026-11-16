@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buscador input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+}
+
+.buscador button {
+    padding: 12px 20px;
+    background: #0c5460;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0c5460;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #062c33;
+}
+
+.resultado {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Estilo de tarjeta limpio */
+.tarjeta-pelicula {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-pelicula img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-pelicula h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+}
+
+.tarjeta-pelicula p {
+    color: #555555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0 0 10px 0;
+}
+
+/* Boton ovalado estilo accion */
+.btn-accion {
+    display: inline-block;
+    background-color: #0c5460;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.btn-accion:hover {
+    background-color: #062c33;
+}
+
+.error {
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+}
